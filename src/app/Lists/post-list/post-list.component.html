@@ -1,0 +1,13 @@
+<mat-accordion *ngIf="lists.length > 0">
+  <mat-expansion-panel *ngFor="let list of lists">
+    <mat-expansion-panel-header>
+      {{ list.title }}
+    </mat-expansion-panel-header>
+     <p> {{ list.content }} </p>
+     <mat-action-row>
+       <button mat-button>EDIT</button>
+       <button mat-button>DELETE</button>
+     </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="lists.length <= 0" > No lists added yet!</p>

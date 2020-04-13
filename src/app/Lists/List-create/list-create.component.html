@@ -1,0 +1,31 @@
+<mat-card>
+  <form (submit)="onAddList(listForm)" #listForm="ngForm">
+    <mat-form-field>
+      <input
+      matInput
+      type="text"
+      name="title"
+      placeholder="ToDo List"
+      ngModel
+      required
+      minlength="3">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+      matInput
+      rows="6"
+      name="content"
+      placeholder="Content"
+      ngModel
+      required>
+    </textarea>
+    </mat-form-field>
+    <button
+      mat-button
+      color="accent"
+      type="submit" >
+      Create List </button>
+  </form>
+
+</mat-card>
+
